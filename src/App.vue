@@ -7,28 +7,29 @@
         </v-btn>
       </v-toolbar-title>
       <v-spacer />
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-      <v-divider class="px-3 py-1 mr-3" vertical />
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-      <v-divider class="px-3 py-1 mr-3" vertical />
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-      <v-divider class="px-3 py-1 mr-3" vertical />
+      <span v-for="(link, i) in sidebarLinks" :key="i" class="fill-height">
+        <span v-if="link.isVisible">
+          <v-btn
+            class="border-e border-s fill-height text-center"
+            link
+            :to="link.route"
+          >
+            <v-icon v-if="link.icon"> {{ link.icon }} </v-icon>
+            {{ link.name }}
+          </v-btn>
+        </span>
+      </span>
       <v-btn
+        density="comfortable"
+        class="border-s fill-height mr-0"
         @click="toggleTheme"
-        :icon="
+      >
+        <v-icon size="x-large">{{
           theme.global.current.value.dark
-            ? 'mdi-weather-sunny'
-            : 'mdi-moon-waning-crescent'
-        "
-      ></v-btn>
+            ? "mdi-weather-sunny"
+            : "mdi-moon-waning-crescent"
+        }}</v-icon></v-btn
+      >
     </v-app-bar>
     <v-main>
       <router-view v-slot="{ Component }">
@@ -54,7 +55,16 @@
         >
         <v-col class="text-center mt-4" cols="12">
           <v-icon size="small" icon="mdi-copyright"></v-icon>
-          , Made with ❤️, & <a href="/uses">various technologies</a> by © <a color="white" href="https://benjamin.michaelis.net" target="_blank" rel="noopener noreferrer"> Benjamin Michaelis</a> {{ new Date().getFullYear() }}
+          , Made with ❤️, & <a href="/uses">various technologies</a> by ©
+          <a
+            color="white"
+            href="https://benjamin.michaelis.net"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Benjamin Michaelis</a
+          >
+          {{ new Date().getFullYear() }}
         </v-col>
       </v-row>
     </v-footer>
@@ -92,8 +102,29 @@ type Link = {
 const footerLinks: Link[] = [
   {
     name: "Github",
-    uri: "https://github.com/BenjaminMichaelis/JobSherpa",
+    uri: "https://github.com/BenjaminMichaelis/personal-site",
     icon: "mdi-github",
+  },
+];
+
+const sidebarLinks = [
+  {
+    route: "/blog",
+    icon: null,
+    name: "Blog",
+    isVisible: true,
+  },
+  {
+    route: "/about",
+    icon: null,
+    name: "About",
+    isVisible: true,
+  },
+  {
+    route: "/contact",
+    icon: null,
+    name: "Contact",
+    isVisible: true,
   },
 ];
 </script>
