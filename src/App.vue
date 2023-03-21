@@ -31,7 +31,7 @@
         }}</v-icon></v-btn
       >
     </v-app-bar>
-    <v-main>
+    <v-main class="mx-lg-10 px-md-16" horizontal>
       <router-view v-slot="{ Component }">
         <transition>
           <component :is="Component" />

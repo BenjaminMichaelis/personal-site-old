@@ -1,23 +1,43 @@
 <template>
-  <v-container>
-    <v-row>
+  <v-container class="fill-height" fluid>
+    <v-row no-gutters class="fill-height">
       <v-col>
-        <v-sheet flat>
-          <span class="intro-message">
-            <h1 class="bounceDown font-weight-thin text-lg">
-              Benjamin Michaelis
-            </h1>
-            <h3 class="bounce font-weight-bold mt-5">Software Engineer</h3>
-          </span>
-        </v-sheet>
-      </v-col>
-      <v-col>
-        <v-card>
-          <h1 class="bounceDown font-weight-thin text-lg">
-            Benjamin Michaelis
-          </h1>
-          <h3 class="bounce font-weight-bold mt-5">Software Engineer</h3>
+        <v-card class="intro-message" flat>
+          <v-row>
+            <v-col cols="10">
+              <v-row no-gutters class="intro-message">
+                <h1 class="bounceDown font-weight-thin text-lg">
+                  Benjamin Michaelis
+                </h1>
+              </v-row>
+              <v-row class="intro-message" no-gutters>
+                <h3 class="bounce font-weight-bold mt-5">Software Engineer</h3>
+              </v-row>
+            </v-col>
+            <v-col cols="2">
+              <v-avatar
+                size="90"
+                image="../assets/avatar/avatar.png"
+              ></v-avatar>
+            </v-col>
+          </v-row>
         </v-card>
+      </v-col>
+      <v-col> </v-col>
+      <v-col order="last">
+        <p>
+          I am a high-capacity, innovative, and social senior looking for work
+          in a culture that values people. I hope to use my love for fast paced
+          and challenging work to provide first class service in order to learn
+          additional skills for the workplace.
+        </p>
+        <br />
+        <p>
+          As much as I enjoy solving problems and learning new things, I also
+          enjoy spending time outdoors, being active, and connecting with
+          friends and family. I am always seeking new ways to gain new life
+          experiences and find that important to me.
+        </p>
       </v-col>
     </v-row>
   </v-container>
