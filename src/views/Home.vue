@@ -2,28 +2,18 @@
   <v-container class="fill-height" fluid>
     <v-row no-gutters class="fill-height">
       <v-col>
-        <v-card class="intro-message" flat>
-          <v-row>
-            <v-col cols="10">
-              <v-row no-gutters class="intro-message">
-                <h1 class="bounceDown font-weight-thin text-lg">
-                  Benjamin Michaelis
-                </h1>
-              </v-row>
-              <v-row class="intro-message" no-gutters>
-                <h3 class="bounce font-weight-bold mt-5">Software Engineer</h3>
-              </v-row>
-            </v-col>
-            <v-col cols="2">
-              <v-avatar
-                size="90"
-                image="../assets/avatar/avatar.png"
-              ></v-avatar>
-            </v-col>
-          </v-row>
+        <v-card flat order="first">
+          <span class="intro-message">
+            <h1 class="bounceDown font-weight-thin text-lg">
+              Benjamin Michaelis
+            </h1>
+            <h3 class="bounce font-weight-bold mt-5">Software Engineer</h3>
+          </span>
         </v-card>
       </v-col>
-      <v-col> </v-col>
+      <v-col>
+        <v-img :max-width="300" cover src="../assets/avatar/avatar.png"></v-img>
+      </v-col>
       <v-col order="last">
         <p>
           I am a high-capacity, innovative, and social senior looking for work
