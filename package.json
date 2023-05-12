@@ -23,7 +23,7 @@
     "coalesce-vue-vuetify3": "4.0.0-alpha.20230303.3",
     "core-js": "^3.30.2",
     "typeface-roboto": "1.1.13",
-    "vue": "^3.2.47",
+    "vue": "^3.3.1",
     "vue-router": "^4.0.13",
     "vuetify": "^3.2.3",
     "webfontloader": "^1.0.0"
