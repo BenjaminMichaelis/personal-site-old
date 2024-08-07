@@ -24,7 +24,7 @@
     "core-js": "^3.38.0",
     "typeface-roboto": "1.1.13",
     "vue": "^3.4.35",
-    "vue-router": "^4.4.2",
+    "vue-router": "^4.4.3",
     "vuetify": "^3.6.14",
     "webfontloader": "^1.0.0"
   },
